@@ -6,6 +6,17 @@ import sys
 from enum import Enum
 import subprocess
 
+import board
+import busio
+
+i2c = busio.I2C(board.SCL, board.SDA)
+import adafruit_ssd1306
+oled = adafruit_ssd1306.SSD1306_I2C(128, 32, i2c)
+import digitalio
+
+reset_pin = digitalio.DigitalInOut(board.D4) # any pin!
+oled = adafruit_ssd1306.SSD1306_I2C(128, 32, i2c, reset=reset_pin)
+
 def usage():
     print("USAGE:")
     print("python3 cardcontrol.py insert")
