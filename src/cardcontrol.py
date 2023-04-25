@@ -4,6 +4,7 @@ from time import sleep
 import socket
 import sys
 from enum import Enum
+import subprocess
 
 def usage():
     print("USAGE:")
@@ -46,7 +47,7 @@ if (sys.argv[1] == "remove"):
 
 if (sys.argv[1] == "update"):
     print("Command: Software Update\n")
-    servo.min()
-    sleep(1.0)
+    updateCmd = "cd ~/git/cardcontrol | git pull --rebase"
+    subprocess.run(updateCmd, shell=True) 
 
 sys.stdout.flush()

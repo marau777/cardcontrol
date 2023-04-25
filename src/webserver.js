@@ -28,6 +28,16 @@ app.get('/remove', (req, res) => {
   });
 })
 
+app.get('/update', (req, res) => {
+  const updateProcess = spawn('python3',["./cardcontrol.py", "update"]);
+  updateProcess.stdout.on('data', (data) => {
+    console.log(data.toString())
+    res.writeHead(200, {'content-type': 'text'})
+    res.write(data.toString())
+    res.end()
+  });
+})
+
 app.listen(port, () => {
   console.log(`cardcontrol app listening on port ${port}`)
 
