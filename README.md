@@ -2,16 +2,56 @@
 SmartCard automated control program.
 
 ### Start Web Server Example "node webserver.js"
-![alt text](cardControlWebServerStart.png "Example: Start Web Server")
+![alt text](./img/cardControlWebServerStart.png "Example: Start Web Server")
 
 ### Web Client Usage Example "index.html"
-![alt text](cardControlExample.png "Example: Client Usage")
+![alt text](./img/cardControlExample.png "Example: Client Usage")
 
 ### Web Client Usage Example "GET {URL}/insert {URL}/remove"
-![alt text](webClientInsert.png "Example: Client Usage")
-![alt text](webClientRemove.png "Example: Client Usage")
+![alt text](./img/webClientInsert.png "Example: Client Usage")
+![alt text](./img/webClientRemove.png "Example: Client Usage")
 ###  cardcontrol application usage
 
-![alt text](cardControlAppExample.png "Example: cardcontrol.py app usage")
+![alt text](./img/cardControlAppExample.png "Example: cardcontrol.py app usage")
 
 
+###  Install on virgin Raspberry PI
+
+```
+sudo apt-get update
+sudo apt-get upgrade
+
+sudo apt install git
+sudo apt install python3-dev
+sudo apt install nodejs
+
+cd ~
+mkdir git
+cd ./git
+
+sudo apt-get purge wiringpi
+git clone git://git.drogon.net/wiringPi
+cd ./wiringPi
+git pull origin
+./build
+
+"Test wiring pi":  gpio
+
+
+cd ~/git
+git clone https://github.com/marau777/cardcontrol
+cd ./cardcontrol
+cd src
+
+"Test cardcontrol.py": 
+python3 cardcontrol.py insert
+python3 cardcontrol.py remove
+ 
+
+"Test wiring webserver.js":  
+node webserver.js
+
+"Open browser and go to URL  ( http://{your IP address}:3000 ) and the homepage should come up"
+
+
+```
