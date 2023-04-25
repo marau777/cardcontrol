@@ -12,7 +12,12 @@
 <p id="status"></p>
 
 <br><br>
-<a href="https://github.com/marau777/cardcontrol">About</a>
+
+<button onclick="checkForUpdates()">Check for Updates</button>
+<br>
+<br>
+<a href="https://github.com/marau777/cardcontrol" target="_blank">About</a>
+
 
 <script>
     var currentUrl = window.location;
@@ -30,6 +35,15 @@
         xmlHttp.send( null ); 
         document.getElementById("status").innerHTML = xmlHttp.responseText;
     }
+
+    function checkForUpdates() {
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.open( "GET", currentUrl +'update', false );
+        xmlHttp.send( null ); 
+        document.getElementById("status").innerHTML = xmlHttp.responseText;
+    }
+
+
 </script>
 
 </body>

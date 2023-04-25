@@ -9,6 +9,7 @@ def usage():
     print("USAGE:")
     print("python3 cardcontrol.py insert")
     print("python3 cardcontrol.py remove")
+    print("python3 cardcontrol.py update")
     return
 
 def get_ip_address():
@@ -40,6 +41,11 @@ if (sys.argv[1] == "insert"):
 
 if (sys.argv[1] == "remove"):
     print("Command: Card Removed\n")
+    servo.min()
+    sleep(1.0)
+
+if (sys.argv[1] == "update"):
+    print("Command: Software Update\n")
     servo.min()
     sleep(1.0)
 
