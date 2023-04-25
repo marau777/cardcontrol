@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Smart Card Control</h1>
+
+<button onclick="insertCard()">Insert Card</button>
+<button onclick="removeCard()">Remove Card</button>
+
+<br><br>
+<h3>Status:</h3>
+<p id="status"></p>
+
+<br><br>
+<a href="https://github.com/marau777/cardcontrol">About</a>
+<script>
+    var currentUrl = window.location;
+
+    function insertCard() {
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.open( "GET", currentUrl +'insert', false );
+        xmlHttp.send( null ); 
+        document.getElementById("status").innerHTML = xmlHttp.responseText;
+    }
+
+    function removeCard() {
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.open( "GET", currentUrl +'remove', false );
+        xmlHttp.send( null ); 
+        document.getElementById("status").innerHTML = xmlHttp.responseText;
+    }
+</script>
+
+</body>
+</html>

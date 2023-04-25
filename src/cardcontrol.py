@@ -2,11 +2,14 @@
 from gpiozero import Servo
 from time import sleep
 import socket
+import sys
+from enum import Enum
 
-
-import adafruit_ssd1306
-oled = adafruit_ssd1306.SSD1306_I2C(128, 32, i2c)
-
+def usage():
+    print("USAGE:")
+    print("python3 cardcontrol.py insert")
+    print("python3 cardcontrol.py remove")
+    return
 
 def get_ip_address():
  ip_address = '';
@@ -16,19 +19,28 @@ def get_ip_address():
  s.close()
  return ip_address
 
-print(get_ip_address())
-RST = None
-disp = Adafruit_SSD1306.SSD1306_128_32(rst=RST, i2c_address=0x3C)
+# Print usage if no arguments given.
+nArgs = len(sys.argv)
+if (nArgs <= 1):
+    usage()
+    exit()
+
+print("\nApp: ")
+for i in range(0, nArgs):
+    print(sys.argv[i], end = " ")
+
+print("\nIP Address:", get_ip_address())
 
 servo = Servo(18)
 
-try:
-	while True:
-         servo.min()
-         sleep(0.5)
-         servo.mid()
-         sleep(0.5)
-         servo.max()
-         sleep(0.5)
-except KeyboardInterrupt:
-	print("Program stopped")
+if (sys.argv[1] == "insert"):
+    print("Command: Card Inserted\n")
+    servo.max()
+    sleep(1.0)
+
+if (sys.argv[1] == "remove"):
+    print("Command: Card Removed\n")
+    servo.min()
+    sleep(1.0)
+
+sys.stdout.flush()
