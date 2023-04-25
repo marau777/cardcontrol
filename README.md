@@ -1,19 +1,17 @@
 # cardcontrol
 SmartCard automated control program.
 
-### Start Web Server
-jonahrau@rpi-jonahrau:~/git/cardcontrol/src $ node webserver.js
-cardcontrol app listening on port 3000
+### Start Web Server Example "node webserver.js"
+![alt text](cardControlWebServerStart.png "Example: Start Web Server")
 
-### Example Client Use
+### Web Client Usage Example "index.html"
+![alt text](cardControlExample.png "Example: Client Usage")
 
-http://192.168.1.202:3000/
+### Web Client Usage Example "GET {URL}/insert {URL}/remove"
+![alt text](webClientInsert.png "Example: Client Usage")
+![alt text](webClientRemove.png "Example: Client Usage")
+###  cardcontrol application usage
 
-
-### Locally Test cardcontrol application
-jonahrau@rpi-jonahrau:~/git/cardcontrol/src $ python3 ./cardcontrol.py 
-USAGE:
-python3 cardcontrol.py insert
-python3 cardcontrol.py remove
+![alt text](cardControlAppExample.png "Example: cardcontrol.py app usage")
 
 
