@@ -35,23 +35,22 @@ cd ./wiringPi
 git pull origin
 ./build
 
-"Test wiring pi":  gpio
-
+"Test wiring pi":  
+gpio
 
 cd ~/git
 git clone https://github.com/marau777/cardcontrol
 cd ./cardcontrol
 cd src
+git pull --rebase
 
 "Test cardcontrol.py": 
 python3 cardcontrol.py insert
 python3 cardcontrol.py remove
  
-
-"Test wiring webserver.js":  
+"Test webserver.js":  
 node webserver.js
 
 "Open browser and go to URL  ( http://{your IP address}:3000 ) and the homepage should come up"
-
 
 ```
