@@ -1,6 +1,8 @@
 const express = require('express')
+const ip = require('ip');
 const app = express()
 const port = 3000
+const ipAddress = ip.address();
 
 const spawn = require("child_process").spawn;
 
@@ -14,9 +16,9 @@ app.get('/insert', (req, res) => {
     console.log(data.toString())
     res.writeHead(200, {'content-type': 'text'})
     res.write(data.toString())
-    res.end() 
+    res.end()
   });
-})
+}) 
 
 app.get('/remove', (req, res) => {
   const removeProcess = spawn('python3',["./cardcontrol.py", "remove"]);
@@ -41,6 +43,5 @@ app.get('/update', (req, res) => {
 */
 
 app.listen(port, () => {
-  console.log(`cardcontrol app listening on port ${port}`)
-
+  console.log(`cardcontrol app listening at http://${ipAddress}:${port}`);
 })

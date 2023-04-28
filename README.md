@@ -22,13 +22,19 @@ sudo apt-get update
 sudo apt-get upgrade
 
 sudo apt install git
+
+"Python stuff"
 sudo apt install python3-dev
+sudo apt-get -y install python3-pip
+pip3 install adafruit-circuitpython-ssd1306
+
+"Nodejs stuff"
 sudo apt install nodejs
 
+"WiringPi Library and Utility"
 cd ~
 mkdir git
 cd ./git
-
 sudo apt-get purge wiringpi
 git clone git://git.drogon.net/wiringPi
 cd ./wiringPi
@@ -38,6 +44,7 @@ git pull origin
 "Test wiring pi":  
 gpio
 
+"cardcontrol APP"
 cd ~/git
 git clone https://github.com/marau777/cardcontrol
 cd ./cardcontrol
@@ -54,3 +61,9 @@ node webserver.js
 "Open browser and go to URL  ( http://{your IP address}:3000 ) and the homepage should come up"
 
 ```
+
+##Wiring Pictures
+
+![alt text](./img/wiringServo.jpg "wiringServo")
+![alt text](./img/wiringIntoDisplay.jpg "wiringIntoDisplay")
+![alt text](./img/wiringDisplayIntoRpi.jpg "wiringDisplayIntoRpi")
