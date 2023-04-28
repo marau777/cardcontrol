@@ -67,13 +67,11 @@ draw.rectangle(
 '''
 # Load default font.
 fontsize = 15
-font = ImageFont.truetype("FreeMonoBold.ttf", fontsize)
+font = ImageFont.truetype("DejaVuSansMono-Bold.ttf", fontsize)
 
 # Draw Some Text
 text = get_ip_address()
 (font_width, font_height) = font.getsize(text)
-print(font_width)
-print(font_height)
 
 draw.text(
     (5,25),

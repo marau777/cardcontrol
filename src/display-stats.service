@@ -1,0 +1,14 @@
+ [Unit]
+ Description=Service to Display IP Address
+ After=multi-user.target
+ After=network-online.target
+ Wants=network-online.target
+
+ [Service]
+ Type=oneshot
+ WorkingDirectory=/home/pi/git/cardcontrol/src
+ ExecStart=/usr/bin/python3 display.py
+
+ [Install]
+ WantedBy=multi-user.target
+

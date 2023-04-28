@@ -26,7 +26,7 @@ sudo apt install git
 "Python stuff"
 sudo apt install python3-dev
 sudo apt-get -y install python3-pip
-pip3 install adafruit-circuitpython-ssd1306
+pip3 -H install adafruit-circuitpython-ssd1306
 
 "Nodejs stuff"
 sudo apt install nodejs
