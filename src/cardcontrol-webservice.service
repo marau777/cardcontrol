@@ -1,0 +1,12 @@
+ [Unit]
+ Description=Webserver for cardcontrol
+ After=network-online.target
+ Wants=network-online.target
+
+ [Service]
+ Type=simple
+ WorkingDirectory=/usr/local/bin
+ ExecStart=/usr/bin/node cardcontrol-webserver.js
+
+ [Install]
+ WantedBy=multi-user.target

@@ -20,16 +20,17 @@ SmartCard automated control program.
 ```
 sudo apt-get update
 sudo apt-get upgrade
-
 sudo apt install git
 
 "Python stuff"
 sudo apt install python3-dev
 sudo apt-get -y install python3-pip
-pip3 -H install adafruit-circuitpython-ssd1306
+sudo pip3 install adafruit-circuitpython-ssd1306
 
 "Nodejs stuff"
 sudo apt install nodejs
+sudo npm install express -g
+
 
 "WiringPi Library and Utility"
 cd ~
@@ -48,15 +49,18 @@ gpio
 cd ~/git
 git clone https://github.com/marau777/cardcontrol
 cd ./cardcontrol
-cd src
 git pull --rebase
+cd ./cardcontrol
+sudo ./install.sh
+cd ./src
+npm install -g
 
 "Test cardcontrol.py": 
-python3 cardcontrol.py insert
-python3 cardcontrol.py remove
+../src/python3 cardcontrol.py insert
+../src/python3 cardcontrol.py remove
  
-"Test webserver.js":  
-node webserver.js
+"Test cardcontrol-webserver.js":  
+../src/node cardcontrol-webserver.js
 
 "Open browser and go to URL  ( http://{your IP address}:3000 ) and the homepage should come up"
 

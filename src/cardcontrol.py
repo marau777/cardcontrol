@@ -37,12 +37,12 @@ servo = Servo(18)
 
 if (sys.argv[1] == "insert"):
     print("Command: Card Inserted\n")
-    servo.max()
+    servo.min()
     sleep(1.0)
 
 if (sys.argv[1] == "remove"):
     print("Command: Card Removed\n")
-    servo.min()
+    servo.max()
     sleep(1.0)
 
 if (sys.argv[1] == "update"):

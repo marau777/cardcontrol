@@ -66,7 +66,7 @@ draw.rectangle(
 )
 '''
 # Load default font.
-fontsize = 15
+fontsize = 14
 font = ImageFont.truetype("DejaVuSansMono-Bold.ttf", fontsize)
 
 # Draw Some Text
@@ -74,8 +74,22 @@ text = get_ip_address()
 (font_width, font_height) = font.getsize(text)
 
 draw.text(
-    (5,25),
+    (5,15),
+    "http://",
+    font=font,
+    fill=255,
+)
+
+draw.text(
+    (5,30),
     text,
+    font=font,
+    fill=255,
+)
+
+draw.text(
+    (5,45),
+    ":3000",
     font=font,
     fill=255,
 )

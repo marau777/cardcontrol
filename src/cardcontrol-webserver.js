@@ -1,13 +1,13 @@
 const express = require('express')
 const ip = require('ip');
-const app = express()
-const port = 3000
+const app = express();
+const port = 3000;
 const ipAddress = ip.address();
 
 const spawn = require("child_process").spawn;
 
 app.get('/', (req, res) => {
-  res.sendfile('./index.html');
+  res.sendfile('./cardcontrol-index.html');
 })
 
 app.get('/insert', (req, res) => {

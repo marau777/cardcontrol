@@ -1,12 +1,12 @@
  [Unit]
  Description=Service to Display IP Address
- After=multi-user.target
  After=network-online.target
  Wants=network-online.target
 
  [Service]
- Type=idle
- ExecStart=/usr/bin/python3 %h/git/cardcontrol/src/display.py
+ Type=oneshot
+ WorkingDirectory=/usr/local/bin
+ ExecStart=/usr/bin/python3 cardcontrol-display-stats.py
 
  [Install]
  WantedBy=multi-user.target
