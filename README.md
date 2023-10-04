@@ -122,6 +122,6 @@ https://www.amazon.com/Otylzto-Assorted-Storage-Container-Supplies/dp/B0C1CSDZJM
 
 ##Wiring Pictures
 
-![alt text](./img/wiringServo.jpg "wiringServo")
-![alt text](./img/wiringIntoDisplay.jpg "wiringIntoDisplay")
-![alt text](./img/wiringDisplayIntoRpi.jpg "wiringDisplayIntoRpi")
+<img src="./img/wiringServo.jpg" alt="drawing2" width="50%"/>
+<img src="./img/wiringIntoDisplay.jpg" alt="drawing3" width="50%"/>
+<img src="./img/wiringDisplayIntoRpi.jpg" alt="drawing4" width="50%"/>
