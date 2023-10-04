@@ -17,9 +17,15 @@ SmartCard automated control program.
 
 ###  Install on virgin Raspberry PI
 
+SSH into raspberry PI:
+hostname: rpi-security
+username: pi
+password: 4rpiuser!
+
 ```
-sudo apt-get update
-sudo apt-get upgrade
+sudo apt update
+sudo apt upgrade
+sudo raspi-config "Enable interfaces I2C and ssh"
 sudo apt install git
 
 "Python stuff"
@@ -28,16 +34,18 @@ sudo apt-get -y install python3-pip
 sudo pip3 install adafruit-circuitpython-ssd1306
 
 "Nodejs stuff"
+Go to:  https://deb.nodesource.com/ and follow instructions to install latest nodejs.
+or simply...
+
 sudo apt install nodejs
 sudo npm install express -g
-
 
 "WiringPi Library and Utility"
 cd ~
 mkdir git
 cd ./git
 sudo apt-get purge wiringpi
-git clone git://git.drogon.net/wiringPi
+git clone https://github.com/WiringPi/WiringPi.git
 cd ./wiringPi
 git pull origin
 ./build
