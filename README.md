@@ -1,7 +1,7 @@
 # cardcontrol
 SmartCard automated control program.
 
-![alt text](./img/CardControlHardware.jpg "cardcontrol station")
+<img src="./img/StationPic.jpg" alt="drawing" width="50%"/>
 
 ### Web Client Usage Example "index.html"
 ![alt text](./img/cardControlExample.png "Example: Client Usage")
