@@ -4,11 +4,12 @@ SmartCard automated control program.
 <img src="./img/StationPic.jpg" alt="drawing" width="50%"/>
 
 ### Web Client Usage Example "index.html"
-![alt text](./img/cardControlExample.png "Example: Client Usage")
+<img src="./img/cardControlExample.png" alt="drawing" width="50%"/>
 
 ### Web Client Usage Example "GET {URL}/insert {URL}/remove"
-![alt text](./img/webClientInsert.png "Example: Client Usage")
-![alt text](./img/webClientRemove.png "Example: Client Usage")
+<img src="./img/webClientInsert.png" alt="drawing" width="50%"/>
+<img src="./img/webClientRemove.png" alt="drawing" width="50%"/>
+
 ###  cardcontrol application usage
 
 ![alt text](./img/cardControlAppExample.png "Example: cardcontrol.py app usage")
