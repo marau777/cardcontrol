@@ -125,4 +125,5 @@ https://www.amazon.com/Otylzto-Assorted-Storage-Container-Supplies/dp/B0C1CSDZJM
 
 <img src="./img/wiringServo.jpg" alt="drawing2" width="50%"/>
 <img src="./img/wiringIntoDisplay.jpg" alt="drawing3" width="50%"/>
+Use Extreme Caution in wiring up the display as VCC and GND locations are not standardized on the display connector.!!!!
 <img src="./img/wiringDisplayIntoRpi.jpg" alt="drawing4" width="50%"/>
