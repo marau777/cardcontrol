@@ -49,6 +49,7 @@ Go to:  https://deb.nodesource.com/ and follow instructions to install latest no
 or simply...
 
 sudo apt install nodejs
+sudo apt install npm
 sudo npm install express -g
 
 "WiringPi Library and Utility"
@@ -63,6 +64,8 @@ git pull origin
 
 "Test wiring pi":  
 gpio
+   "gpio: At your service!"
+
 
 "cardcontrol APP"
 cd ~/git
@@ -72,7 +75,7 @@ git pull --rebase
 cd ./cardcontrol
 sudo ./install.sh
 cd ./src
-npm install -g
+sudo npm install -g
 
 "Test cardcontrol.py": 
 ../src/python3 cardcontrol.py insert
